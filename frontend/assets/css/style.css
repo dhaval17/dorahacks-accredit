@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
+*,
+html,
+body
+{
+	margin: 0;
+	padding: 0;
+	font-family: AvenirNext-Bold; 
+	letter-spacing: 0.8px;
+	font-weight: 800;
+}
+body
+{
+	background: #F9F9F9;
+	overflow-x: hidden;
+	color: #000;
+}
+.navbar-custom
+{
+	background: #ffffff;
+	height: 100px;
+}
+.navbar-custom .address-nav
+{
+	color: #4B5BD6;
+	font-size: 12px;
+	font-weight: 700;
+	margin-right: 10px;
+	padding: 10px;
+	background: #f9f9f9;
+	border: 1px dashed #ccc;
+}
+.user-image
+{
+    display: block;
+    background: #4A57DA;
+    color: #ffffff;
+    padding: 5px 15px;
+    font-weight: 700;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 190%;
+}
+.login-container
+{
+	width: 355px;
+	display: block;
+	margin: 100px auto;
+}
+.login-container input,
+.form-input
+{
+	font-size: 12px;
+	height: 50px;
+	width: 100%;
+	display: block;
+	padding-left: 10px;
+  	border: 1px solid #eee;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.11);
+	margin-bottom: 10px;
+}
+.login-container input:focus,
+.form-input:focus,
+select.login-select:focus
+{
+	outline: none;
+	color: #4A57DA;
+	border: 1px solid #4A57DA;
+}
+.btn-action
+{
+	background: #4A57DA;
+	height: 50px;
+	border-radius: 0;
+	color: #ffffff;
+	font-weight: 700;
+	margin-top: 1px;
+}
+.btn-right
+{
+	text-align: right;
+	display: block;
+}
+.btn-action.btn-padding
+{
+	padding-left: 25px;
+	padding-right: 25px;
+}
+select.login-select
+{
+	appearance: none;
+	width: 100%;
+	display: block;
+	font-size: 12px;
+	  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-left: 10px;
+  border-radius: 0;
+  background: #ffffff;
+  border: 1px solid #eee;
+	height: 50px;
+}
+.segmented-control {
+	display: table;
+	width: 100%;
+	margin: 0px 0 10px 0;
+	padding: 0;
+}
+
+.segmented-control__item {
+	display: table-cell;
+	margin: 0 10px 0 0;
+	padding: 0;
+	list-style-type: none;
+	background: #FFFFFF;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.11);
+}
+
+.segmented-control__input {
+	position: absolute;
+	visibility: hidden;
+}
+
+.segmented-control__label {
+	display: block;
+	margin: 0 0px -1px 0; /* -1px margin removes double-thickness borders between items */
+	padding: 1.33em .25em;
+	border: 1px solid #fff;
+	font-size: 12px; 
+	font-family: 'Open Sans';
+	font-weight: 700;
+	text-align: center;  
+	cursor: pointer;
+	background: #ffffff;
+}
+
+.segmented-control__label:hover {
+	color: #4B5BD6;
+}
+
+.segmented-control__input:checked + .segmented-control__label {
+	background: transparent;
+	color: #4B5BD6;
+	border: 1px solid #4B5BD6; 
+}
+.nav-add-title
+{
+	font-size: 10px;
+	display: inline-block;
+	margin-right: 4px;
+	letter-spacing: 1px;
+	font-weight: 700;
+	color: #000000;
+}
+h3.title
+{
+	font-weight: 700;
+	font-size: 30px;
+	line-height: 150%;
+    margin-bottom: 20px;
+}
+h5.title
+{
+	font-family: AvenirNext-Bold;
+	font-size: 16px;
+	color: #000000;
+	letter-spacing: 0;
+	margin-left: 17px;
+}
+.content-holder
+{
+	padding-top: 50px;
+	max-width: 600px;
+}
+.space-10
+{
+	height: 10px;
+}
+.space-20
+{
+	height: 20px;
+}
+code 
+{
+    font-size: 14px;
+    color: #ffffff;
+    padding: 10px 2;
+    background: #000;
+    word-break: break-word;
+}
+.blue-text
+{
+	color: #4B5BD6;
+	font-weight: 800;
+	font-size: 20px;
+	border-bottom: 1px dashed #4B5BD6;
+}
+.remaining-bal
+{
+	margin-top: 10px;
+}
+.card-box
+{
+	display: block;
+  	background-color: #fff;
+	border: 1px solid #eee;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.11);
+	padding: 10px;
+}
+.reviewer-image
+{
+	height: 40px;
+	width: 40px;
+	border-radius: 6px;
+}
+.username-r
+{
+	margin-left: 5px;
+}
+.pretty {
+    margin-left: 1em;
+}
+.bio-r
+{
+	font-size: 12px;
+	padding-top: 10px;
+	font-weight: 300;
+}
+.rate
+{
+    margin-top: 10px;
+    display: block;
+    padding: 12px;
+    background: black;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
+.modal-content
+{
+  background: #000000;
+  color: #fff;
+  border-radius: none;
+}
+.modal-header,
+.modal-footer
+{
+  border: none;
+}
+.modal-footer .btn-trade
+{
+  font-weight: 800;
+}
+.modal-body .title
+{
+  font-size: 10px;
+}
+.modal-body .left-allign
+{
+  text-align: left;
+}
+.title-content
+{
+	overflow-wrap: break-word;
+    line-height: 160%;
+}
+.bootstrap-tagsinput {
+  background-color: #fff;
+	border: 1px solid #eee;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.11);
+  display: inline-block;
+  padding: 15px;
+  vertical-align: middle;
+  width: 100%;
+  line-height: 150%;
+  cursor: text;
+  border-radius: 0;
+}
+#question-page .bootstrap-tagsinput
+{
+background: transparent;
+border: none;	
+box-shadow: none;
+padding: 0;
+}
+.bootstrap-tagsinput input {
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background-color: transparent;
+  padding: 0 6px;
+  margin: 0;
+  width: auto;
+  max-width: inherit;
+}
+
+#question-page .bootstrap-tagsinput input {
+  background-color: #fff;
+	border: 1px solid #eee;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.11);
+  display: inline-block;
+  padding: 15px;
+  vertical-align: middle;
+  width: 100%;
+  line-height: 150%;
+  cursor: text;
+  border-radius: 0;
+}
+.bootstrap-tagsinput input:focus {
+  border: none;
+  box-shadow: none;
+}
+.bootstrap-tagsinput .badge {
+  margin-right: 2px;
+  color: white;
+  background-color:#4B5BD6;
+  padding: 10px 15px;
+  border-radius: 1px;
+}
+#question-page .bootstrap-tagsinput .badge
+{
+	padding: 20px 15px !important;
+	margin-bottom: 5px;
+  	background-color: #fff;
+	border: 1px solid #eee;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.11) !important;
+	color: #000;
+	border: none;	
+	box-shadow: none;
+}
+.bootstrap-tagsinput .badge [data-role="remove"] {
+  margin-left: 8px;
+  cursor: pointer;
+}
+.bootstrap-tagsinput .badge [data-role="remove"]:after {
+  content: "×";
+  padding: 0px 4px;
+  background-color:rgba(0, 0, 0, 0.1);
+  border-radius:0%;
+  font-size:13px
+}
+.bootstrap-tagsinput .badge [data-role="remove"]:hover:after {
+
+  background-color:rgba(0, 0, 0, 0.62);}
+.bootstrap-tagsinput .badge [data-role="remove"]:hover:active {
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.slider
+{
+	width: 100%;
+}
+#editor { 
+height: 500px;
+width: 100%;
+    }

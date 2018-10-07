@@ -1,0 +1,16 @@
+{
+    "companies": [
+        {
+            "name": "Hello World",
+            "username": "helloworld",
+            "password": "letmein"
+        }
+    ],
+    "reviewer": [
+        {
+            "name": "John Doe",
+            "username": "johndoe",
+            "password": "letmein"
+        }
+    ]
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Welcome to Accredit</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+			  crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="navbar navbar-custom">
+  <a class="navbar-brand" href="#">
+    <img src="assets/images/logo.png" alt="Logo" style="height: 15px;">
+  </a>
+  <!-- Links -->
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item user-image">
+    	D
+    </li>
+  </ul>
+</nav>
+<div class="login-container">
+	<div class="row"><h3 class="title center-text">BITCH you're back? </h3></div>
+	<div class="row">
+		<input type="text" placeholder="Username" id="username">
+	</div>
+	<div class="row">
+		<input type="Password" placeholder="***************" id="password">
+	</div>
+	<div class="row">
+	<ul class="segmented-control">
+		<li class="segmented-control__item"> 
+			<input class="segmented-control__input" type="radio" value="1"   name="option" id="option-1" checked>  
+			<label class="segmented-control__label" for="option-1" > Company </label> 
+		</li>
+		<li class="segmented-control__item"> 
+			<input class="segmented-control__input" type="radio" value="2" name="option" id="option-2" >
+			<label class="segmented-control__label" for="option-2" > Reviewer </label> 
+		</li>
+	</ul>
+	</div>
+	<div class="row">
+	<button class="btn btn-block btn-action" onclick="login()">Sign in</button>
+	</div>
+</div>
+<script>
+	function login() {
+		var username = document.getElementById("username").value;
+		var password = document.getElementById("password").value, type;
+		if(document.getElementById("option-1").checked) {
+			type = "company"
+		}
+		else {
+			type = "reviewer"
+		}
+		$.ajax({
+            url: 'http://localhost:1711/login/' + type,
+            type: 'post',
+						dataType: 'json',
+						data: JSON.stringify({
+							username: username,
+							password: password
+						}),
+            contentType: 'application/json',
+            success: function (data) {
+							token = 'Bearer ' + data.token
+							document.cookie = 'token='+token;
+							if(type == "company") {
+								window.location = "http://localhost:8000/index.html"
+							}
+							else {
+								window.location = "http://localhost:8000/reviewer-dashboard.html"
+							}
+            }
+        });
+	}
+
+	function getCookie(name) {
+		var value = "; " + document.cookie;
+		var parts = value.split("; " + name + "=");
+		if (parts.length == 2) return parts.pop().split(";").shift();
+	}
+
+</script>
+</body>
+</html>
